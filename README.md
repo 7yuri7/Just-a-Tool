@@ -13,7 +13,7 @@ Funções:
 Aviso: 
 
 Cobre distros baseadas em ARCH.
-a ferramenta para instalar ferramentas de desenvolvimento consegue puxar sua lista pessoa e instalar via MISE e serve para outras distros.
+a ferramenta para instalar ferramentas de desenvolvimento consegue instalar via MISE e serve para outras distros.
 Tudo isso usando de Git-presets com pacotes selecionados por sua distro
 (VOCÊ deve CRIAR seu preset).
 
