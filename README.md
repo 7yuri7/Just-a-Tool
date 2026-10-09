@@ -1,4 +1,4 @@
-# Just-a-Tool
+# JAT
 
 ---
 
