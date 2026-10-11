@@ -427,8 +427,16 @@ sync_dev_repo() {
 install_dev_environment() {
   sync_dev_repo || return
 
-  local target_dir="$REPO_DIR/$PKG_FAMILY"
+  local family_lower
+  family_lower=$(echo "$PKG_FAMILY" | tr '[:upper:]' '[:lower:]')
+  local target_dir="$REPO_DIR/$family_lower"
+
   if [ ! -d "$target_dir" ]; then
+    target_dir=$(find "$REPO_DIR" -maxdepth 2 -type d -iname "$PKG_FAMILY" | head -n 1)
+  fi
+
+  
+  if [ -z "$target_dir" ] || [ ! -d "$target_dir" ]; then
     target_dir="$REPO_DIR"
   fi
 
